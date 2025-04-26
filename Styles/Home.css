@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Reset básico */
 * {
     margin: 0;
@@ -76,7 +79,7 @@
   .image-area {
     flex: 1;
     min-width: 300px;
-    background-image: url('pexels-500photos-com-15338-93400.jpg'); /* Altere aqui */
+    background-image: url('FotoInicio.jpg'); /* Altere aqui */
     background-size: cover;
     background-position: center;
     border-top: 1px solid #000;
@@ -202,9 +205,13 @@
     }
 
     .nav__logo {
-      
-      background-image: url('Moderna\ MT.png'); /* Altere aqui */
-     
+      width: 120px;
+      height: 40px;
+      background-image: url('moderna-Logo.png'); /* Certifique-se que está no mesmo diretório */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
     }
 
     .nav__close, 

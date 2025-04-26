@@ -4,15 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moderna</title>
-  <link rel="stylesheet" href="Home.css">
+  <!-- loader -->
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+   <!-- css -->
+  <link rel="stylesheet" href="Styles/Home.css">
+  <link rel="stylesheet" href="Styles/Parceiros.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+
+  <!-- Parceiros -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   
 </head>
 <body>
   <header class="header">
     <nav class="nav continerNav">
-      <a href="#" class="nav__logo">Morderna</a>
+      <a href="#" class="nav__logo"></a>
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
@@ -51,14 +62,7 @@
       <div class="text-area">
         <h1>A solução da sua obra</h1>
         <div class="highlight-box">
-          <p
-          data-x="left"
-									data-y="center" data-voffset="['-100','-100','-100','-125']"
-									data-start="700"
-									data-fontsize="['22','22','22','40']"
-									data-lineheight="['25','25','25','45']"
-									data-transform_in="y:[-50%];opacity:0;s:500;"
-          >Somos especialistas em desenvolvimento da sua obra e gestão de negócios</p>
+          <p>A Moderna está sempre pronta para suas transformações.</p>
           <a href="" class="button">
             Conheça nossas soluções <span>+</span>
           </a>
@@ -67,27 +71,199 @@
       <div class="image-area"></div>
     </div>
   </section>
+<!-- Fim tela inico -->
 
-  <div class="informacao">
-    a teste
+
+ <div class="slide-container swiper">
+  <div class="projetos-titulo">
+    <h1>Projetos</h1>
+  </div>
+  <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="Img/plaenge logo.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">NYC Jardim das Américas</h2>
+                  <p class="description">Plaenge</p>
+
+                  <button class="button">Ver Fotos</button>
+              </div>
+          </div>
+
+         <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="Img/Edificio Splendore.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Splendore</h2>
+                  <p class="description">Plaenge</p>
+
+                  <button class="button">Ver Fotos</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="Img/Upper.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Upper</h2>
+                  <p class="description">Plaenge</p>
+
+                  <button class="button">Ver Fotos</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="Img/Bravie.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Bravie</h2>
+                  <p class="description">Plaenge</p>
+
+                  <button class="button">Ver Fotos</button>
+              </div>
+          </div>
+ <!-- 
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="https://i.postimg.cc/bYtT9DGn/profile5.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Billy Henry</h2>
+                  <p class="description">He likes tortilla filled with scrambled eggs, cheese, beans, and salsa</p>
+
+                  <button class="button">View More</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="https://i.postimg.cc/7Zxn4KK1/profile6.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Jessica Miller</h2>
+                  <p class="description">She likes oatmeal topped with fruits, nuts, or honey for added flavor</p>
+
+                  <button class="button">View More</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="https://i.postimg.cc/5tQYWvWq/profile7.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Daniel Lewis</h2>
+                  <p class="description">He likes poached eggs in an English muffin with ham and hollandaise sauce</p>
+
+                  <button class="button">View More</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="https://i.postimg.cc/Hkydptjx/profile8.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">Emily Rock</h2>
+                  <p class="description">She likes chia seeds soaked in milk and topped with fruits</p>
+
+                  <button class="button">View More</button>
+              </div>
+          </div>
+
+          <div class="card swiper-slide">
+              <div class="image-content">
+                  <span class="overlay"></span>
+
+                  <div class="card-image">
+                      <img src="https://i.postimg.cc/4xVRCNFH/profile9.jpg" alt="image" class="card-img">
+                  </div>
+              </div>
+
+              <div class="card-content">
+                  <h2 class="name">John Doe</h2>
+                  <p class="description">He likes bread with eggs and milk, fried with syrup and powdered sugar</p>
+
+                  <button class="button">View More</button>
+              </div>
+          </div> -->
+      </div>
   </div>
 
-  <script>
-    const navMenu = document.getElementById('nav-menu'),
-          navToggle = document.getElementById('nav-toggle'),
-          navClose = document.getElementById('nav-close');
+  <div class="swiper-button-next swiper-navBtn"></div>
+  <div class="swiper-button-prev swiper-navBtn"></div>
+  <div class="swiper-pagination"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    if(navToggle){
-      navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu');
-      });
-    }
+  <script src="Js/NavBar.js"></script>
+  <script>var swiper = new Swiper (".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: true,
+    fade: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
-    if(navClose){
-      navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu');
-      });
-    }
-  </script>
+    breakpoints: {
+        0: { slidesPerView: 1, },
+        520: { slidesPerView: 2 },
+        950: { slidesPerView: 3 },
+    },
+})</script>
 </body>
 </html>
