@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
   <!-- loader -->
 
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
 
-   <!-- css -->
+  <!-- css -->
   <link rel="stylesheet" href="Styles/Home.css">
   <link rel="stylesheet" href="Styles/Parceiros.css">
   <link rel="stylesheet" href="Styles/Navbar.css">
@@ -18,11 +21,14 @@
 
 
   <!-- Parceiros -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Contagem -->
+  <link rel="stylesheet" href="Styles/Contagem.css">
 
 
-  
 </head>
+
 <body>
   <header class="header">
     <nav class="nav continerNav">
@@ -59,7 +65,7 @@
       </div>
     </nav>
   </header>
-   
+
   <section id="banner">
     <div class="container">
       <div class="text-area">
@@ -74,83 +80,123 @@
       <div class="image-area"></div>
     </div>
   </section>
-<!-- Fim tela inico -->
+  <!-- Fim tela inico -->
+
+  <!-- Contagem -->
+
+  <div class="Contagem">
 
 
- <div class="slide-container swiper">
-  <div class="projetos-titulo">
-    <h1>Projetos</h1>
+    <div class="counter">
+      <div class="counter-number-wrapper">
+        <span class="counter-number-prefix"></span>
+        <span class="counter-number" data-to-value="2017">0</span>
+        <span class="counter-number-suffix"></span>
+      </div>
+      <div class="counter-title">Ano de fundação</div>
+    </div>
+    <div class="counter">
+      <div class="counter-number-wrapper">
+        <span class="counter-number-prefix">+</span>
+        <span class="counter-number" data-to-value="200">0</span>
+        <span class="counter-number-suffix">mil</span>
+      </div>
+      <div class="counter-title">M² construídos</div>
+    </div>
+    <div class="counter">
+      <div class="counter-number-wrapper">
+        <span class="counter-number-prefix">+</span>
+        <span class="counter-number" data-to-value="1250">0</span>
+        <span class="counter-number-suffix"></span>
+      </div>
+      <div class="counter-title">Seviços</div>
+    </div>
+    <div class="counter">
+      <div class="counter-number-wrapper">
+        <span class="counter-number-prefix">+</span>
+        <span class="counter-number" data-to-value="2000">0</span>
+        <span class="counter-number-suffix"></span>
+      </div>
+      <div class="counter-title">Apartamentos entregues</div>
+    </div>
   </div>
-  <div class="slide-content">
+
+
+  <!-- FOTOS -->
+  <div class="slide-container swiper">
+    <div class="projetos-titulo">
+      <h1>Projetos</h1>
+    </div>
+    <div class="slide-content">
       <div class="card-wrapper swiper-wrapper">
-          <div class="card swiper-slide">
-              <div class="image-content">
-                  <span class="overlay"></span>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
 
-                  <div class="card-image">
-                      <img src="Img/plaenge logo.jpg" alt="image" class="card-img">
-                  </div>
-              </div>
-
-              <div class="card-content">
-                  <h2 class="name">NYC Jardim das Américas</h2>
-                  <p class="description">Plaenge</p>
-
-                  <button class="button" onclick="window.location.href='Pages/Galeria/nyc.html'">Ver Fotos</button>
-              </div>
+            <div class="card-image">
+              <img src="Img/plaenge logo.jpg" alt="image" class="card-img">
+            </div>
           </div>
 
-         <div class="card swiper-slide">
-              <div class="image-content">
-                  <span class="overlay"></span>
+          <div class="card-content">
+            <h2 class="name">NYC Jardim das Américas</h2>
+            <p class="description">Plaenge</p>
 
-                  <div class="card-image">
-                      <img src="Img/Edificio Splendore.jpg" alt="image" class="card-img">
-                  </div>
-              </div>
+            <button class="button" onclick="window.location.href='Pages/Galeria/nyc.html'">Ver Fotos</button>
+          </div>
+        </div>
 
-              <div class="card-content">
-                  <h2 class="name">Splendore</h2>
-                  <p class="description">Plaenge</p>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
 
-                  <button class="button">Ver Fotos</button>
-              </div>
+            <div class="card-image">
+              <img src="Img/Edificio Splendore.jpg" alt="image" class="card-img">
+            </div>
           </div>
 
-          <div class="card swiper-slide">
-              <div class="image-content">
-                  <span class="overlay"></span>
+          <div class="card-content">
+            <h2 class="name">Splendore</h2>
+            <p class="description">Plaenge</p>
 
-                  <div class="card-image">
-                      <img src="Img/Upper.jpg" alt="image" class="card-img">
-                  </div>
-              </div>
+            <button class="button">Ver Fotos</button>
+          </div>
+        </div>
 
-              <div class="card-content">
-                  <h2 class="name">Upper</h2>
-                  <p class="description">Plaenge</p>
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
 
-                  <button class="button">Ver Fotos</button>
-              </div>
+            <div class="card-image">
+              <img src="Img/Upper.jpg" alt="image" class="card-img">
+            </div>
           </div>
 
-          <div class="card swiper-slide">
-              <div class="image-content">
-                  <span class="overlay"></span>
+          <div class="card-content">
+            <h2 class="name">Upper</h2>
+            <p class="description">Plaenge</p>
 
-                  <div class="card-image">
-                      <img src="Img/Bravie.jpg" alt="image" class="card-img">
-                  </div>
-              </div>
-
-              <div class="card-content">
-                  <h2 class="name">Bravie</h2>
-                  <p class="description">Plaenge</p>
-
-                  <button class="button">Ver Fotos</button>
-              </div>
+            <button class="button">Ver Fotos</button>
           </div>
- <!-- 
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="image-content">
+            <span class="overlay"></span>
+
+            <div class="card-image">
+              <img src="Img/Bravie.jpg" alt="image" class="card-img">
+            </div>
+          </div>
+
+          <div class="card-content">
+            <h2 class="name">Bravie</h2>
+            <p class="description">Plaenge</p>
+
+            <button class="button">Ver Fotos</button>
+          </div>
+        </div>
+        <!-- 
           <div class="card swiper-slide">
               <div class="image-content">
                   <span class="overlay"></span>
@@ -236,39 +282,21 @@
               </div>
           </div> -->
       </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
-  <div class="swiper-button-next swiper-navBtn"></div>
-  <div class="swiper-button-prev swiper-navBtn"></div>
-  <div class="swiper-pagination"></div>
-</div>
 
-</body><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="Js/NavBar.js"></script>
-<!-- JS PARCEIRO -->
-<script>var swiper = new Swiper (".slide-content", {
-  slidesPerView: 3,
-  spaceBetween: 25,
-  loop: true,
-  centerSlide: true,
-  fade: true,
-  grabCursor: true,
-  pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-  },
-  navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
+<script src="Js/Parceiros.js"></script>
 
-  breakpoints: {
-      0: { slidesPerView: 1, },
-      520: { slidesPerView: 2 },
-      950: { slidesPerView: 3 },
-  },
-})</script>
+<script src="Js/Contagem.js"></script>
 <script src="Js/Galeria.js"></script>
+
 </html>

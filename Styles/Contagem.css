@@ -1,0 +1,73 @@
+.Contagem {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #2b2f47;
+    background-color: #dee0e9;
+}
+
+/* Estilo para cada contador */
+.counter {
+    text-align: center;
+    flex: 1;
+    min-width: 200px; /* Para manter os contadores compactos em telas menores */
+}
+
+/* Wrapper dos números */
+.counter-number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo do número */
+.counter-number {
+    font-size: 69px;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-block;
+    color: #2b2f47; /* Cor amarela para o número */
+}
+
+/* Prefixo e sufixo ao lado do número */
+.counter-number-prefix,
+.counter-number-suffix {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Título do contador */
+.counter-title {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 2.5;
+}
+
+/* Animação de transição */
+@keyframes counterAnimation {
+    0% {
+        content: "2";
+    }
+    100% {
+        content: attr(data-to-value);
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .counter-number {
+        font-size: 50px;
+    }
+
+    .counter-title {
+        font-size: 16px;
+    }
+
+    .counter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
