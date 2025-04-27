@@ -86,7 +86,7 @@
 
   @media screen and (max-width: 1150px) {
     .nav__logo {
-      margin-top: 10px;
+      
       width: 120px;
       height: 40px;
       background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
@@ -213,7 +213,7 @@
 
   @media screen and (min-width: 1150px) {
     .nav__logo {
-      margin-top: 10px;
+     
       width: 120px;
       height: 40px;
       background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
