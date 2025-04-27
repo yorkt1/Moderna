@@ -43,7 +43,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #2b2f47;
+    
 }
 
 .silva-section-subtitle {
@@ -68,7 +68,7 @@
 }
 
 /* Estilo para os textos */
-.psilva {
+p {
     margin-bottom: 20px;
     color: #2b2f47;
 }
