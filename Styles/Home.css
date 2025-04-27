@@ -1,139 +1,179 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2b2f47;
+  color: #fff;
+}
+
+#banner {
+  background-color: #2b2f47;
+  padding-top: 80px;
+  /* Ajuste conforme a altura da sua navbar */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Área de texto */
+.text-area {
+  flex: 1;
+  min-width: 300px;
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-area h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.highlight-box {
+  border-left: 3px solid #fff;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.highlight-box p {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #dee0e9;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.button span {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Área da imagem */
+.image-area {
+  flex: 1;
+  min-width: 300px;
+  background-image: url('FotoInicio.jpg');
+  /* Altere aqui */
+  background-size: cover;
+  background-position: center;
+  border-top: 3px solid #dee0e9;
+  border-left: 3px solid #dee0e9;
+
+}
+
+/* Faz com que a imagem encoste nas bordas direita, superior e inferior */
+#banner .image-area {
+  min-height: 250px;
+  width: 100%;
+  border-radius: 0;
+  border-top-left-radius: 350px;
+}
+
+.whatsapp {
+  position: fixed;
+  width: 222px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #2b2f47;
-    color: #fff;
-  }
-  
-  #banner {
-    background-color: #2b2f47;
-    padding-top: 80px; /* Ajuste conforme a altura da sua navbar */
-  }
-  
+}
+#whatsapps{
+  height: 50px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 80vh;
-    width: 100%;
-    position: relative;
+    display: block;
   }
-  /* Área de texto */
-  .text-area {
-    flex: 1;
-    min-width: 300px;
-    padding: 80px 100px;
+  .whatsapp {
+    position: fixed;
+    width: 111px;
+    height: 30px;
+    bottom: 40px;
+    right: 20px;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-  }
-  
-  .text-area h1 {
-    font-size: 35px;
-    margin-bottom: 20px;
-  }
-  
-  .highlight-box {
-    border-left: 3px solid #fff;
-    padding-left: 20px;
-    margin-top: 20px;
-  }
-  
-  .highlight-box p {
-    margin-bottom: 16px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #dee0e9;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-  }
-  
-  .button:hover {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  .button span {
-    margin-left: 8px;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  /* Área da imagem */
-  .image-area {
-    flex: 1;
-    min-width: 300px;
-    background-image: url('FotoInicio.jpg'); /* Altere aqui */
-    background-size: cover;
-    background-position: center;
-    border-top: 3px solid #dee0e9;
-    border-left: 3px solid #dee0e9;
     
   }
-  
-  /* Faz com que a imagem encoste nas bordas direita, superior e inferior */
-  #banner .image-area {
-    min-height: 250px;
-    width: 100%;  
-    border-radius: 0;
-    border-top-left-radius: 350px;
+  #whatsapps{
+    height: 25px;
   }
   
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .container {
-      display: block;
-    }
-  
-    .image-area {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      opacity: 0.2; /* controla a transparência */
-      z-index: 1;
-    }
-  
-    .text-area {
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
-      padding: 100px 20px;
-      text-align: center;
-    }
-  
-    .highlight-box {
-      border-left: none;
-      border-top: 2px solid #fff;
-      padding-left: 0;
-      padding-top: 20px;
-    }
+  .image-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.2;
+    /* controla a transparência */
+    z-index: 1;
   }
-  
-  /* Seção extra para testes */
-  .informacao {
-    height: 500px;
-    width: 100%;
-    background-color: aliceblue;
-    color: #000;
+
+  .text-area {
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    padding: 100px 20px;
     text-align: center;
-    line-height: 100px;
   }
-  
-  
+
+  .highlight-box {
+    border-left: none;
+    border-top: 2px solid #fff;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+/* Seção extra para testes */
+.informacao {
+  height: 500px;
+  width: 100%;
+  background-color: aliceblue;
+  color: #000;
+  text-align: center;
+  line-height: 100px;
+}
