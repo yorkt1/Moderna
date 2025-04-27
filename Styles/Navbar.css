@@ -69,7 +69,7 @@
   .nav__logo {
     width: 120px;
     height: 40px;
-    background-image: url('moderna-Logo.png'); /* Certifique-se que está no mesmo diretório */
+    background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
