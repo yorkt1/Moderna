@@ -1,0 +1,104 @@
+.silva-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Seção de conteúdo */
+.silva-section {
+    padding: 50px 0;
+}
+
+/* Grid Responsivo (Baseado no modelo de Bootstrap) */
+.silva-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.silva-col {
+    flex: 1 1 48%;
+    /* Cada coluna ocupa 48% da largura disponível */
+    margin-bottom: 20px;
+}
+
+.silva-col-6 {
+    padding: 5px;
+    flex: 1 1 48%;
+}
+
+.silva-col-12 {
+    flex: 1 1 100%;
+}
+
+.silva-about-left {
+    padding-right: 20px;
+}
+
+.silva-about-right {
+    padding-left: 20px;
+}
+
+/* Títulos */
+.silva-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2b2f47;
+}
+
+.silva-section-subtitle {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Imagens */
+.silva-about-img {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-color: #2b2f47;
+   
+}
+
+.silva-mt-4 {
+    margin-top: 40px;
+}
+
+/* Estilo para os textos */
+p {
+    margin-bottom: 20px;
+    color: #2b2f47;
+}
+
+b {
+    font-weight: bold;
+    
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .silva-col {
+        flex: 1 1 100%;
+        /* As colunas se tornam 100% em telas menores */
+        margin-bottom: 20px;
+    }
+
+    .silva-about-left,
+    .silva-about-right {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .silva-section-title {
+        color: #2b2f47;
+        font-size: 22px;
+    }
+
+    .silva-section-subtitle {
+        color: #2b2f47;
+        font-size: 16px;
+    }
+}
