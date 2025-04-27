@@ -95,16 +95,16 @@
 .button {
     border: none;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #2b2f47;
     padding: 8px 16px;
-    background-color: #4070F4;
+    background-color: #dee0e9;
     border-radius: 6px;
     margin: 14px;
     cursor: pointer;
     transition: all .3s ease;
 }
 
-    .button:hover { background: #265DF2; }
+    .button:hover { background: #717694; }
 
 .swiper-navBtn {
     color: #2b2f47 !important;
