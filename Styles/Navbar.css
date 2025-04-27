@@ -85,6 +85,16 @@
   }
 
   @media screen and (max-width: 1150px) {
+    .nav__logo {
+      margin-top: 5px;
+      width: 120px;
+      height: 40px;
+      background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+    }
     .nav__menu {
       position: fixed;
       left: -100%;
@@ -202,6 +212,17 @@
   }
 
   @media screen and (min-width: 1150px) {
+    .nav__logo {
+      margin-top: 5px;
+      width: 120px;
+      height: 40px;
+      background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+    }
+  
     .continerNav {
       margin-inline: auto;
     }
