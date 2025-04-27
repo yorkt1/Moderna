@@ -80,7 +80,7 @@ body {
 .image-area {
   flex: 1;
   min-width: 300px;
-  background-image: url('FotoInicio.jpg');
+  background-image: url('../Img/FotoInicio.jpg');
   /* Altere aqui */
   background-size: cover;
   background-position: center;
