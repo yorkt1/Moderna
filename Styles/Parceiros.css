@@ -107,19 +107,19 @@
     .button:hover { background: #717694; }
 
 .swiper-navBtn {
-    color: #2b2f47 !important;
+    color: #d0b76e !important;
     transition: all .3s ease;
 }
 
-    .swiper-navBtn:hover { color: #64656a !important; }
+    .swiper-navBtn:hover { color: #2b2f47  !important; }
 
     .swiper-navBtn::before, .swiper-navBtn::after { font-size: 40px !important; }
 
 .swiper-button-next { right: 0 !important; }
 .swiper-button-prev { left: 0 !important; }
 
-.swiper-pagination-bullet { background-color: #2b2f47 !important; opacity: 1 !important; }
-    .swiper-pagination-bullet-active { background-color: #2b2f47 !important; }
+.swiper-pagination-bullet { background-color: #d0b76e !important; opacity: 1 !important; }
+    .swiper-pagination-bullet-active { background-color: #d0b76e !important; }
 
 @media screen and (max-width: 768px) {
     .slide-content { margin: 0 10px; }
