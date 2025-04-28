@@ -1,7 +1,7 @@
 /* css nav bar*/
 
 :root {
-    --header-height: 2.5rem;
+    --header-height: 3.5rem;
     --white-color: hsl(0, 0%, 100%);
     --black-color: hsl(0, 0%, 0%);
     --body-font: "Montserrat Alternates", sans-serif;
@@ -228,7 +228,7 @@
     }
 
     .nav {
-      height: calc(var(--header-height) + 2rem);
+      height: calc(var(3.5rem) + 2rem);
     }
 
     .nav__toggle, .nav__close {
