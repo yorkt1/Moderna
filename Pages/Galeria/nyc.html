@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,83 +9,141 @@
   <link rel="stylesheet" href="../../Styles/Navbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 </head>
-<body><style>
+
+<body>
+  <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
     }
-    
+
+    .gallery-title {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2rem;
+      color: #333;
+      padding: 0 15px;
+    }
+    .tituloPaginas{
+
+      padding-top:50px ;
+    }
     .gallery-container {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+      gap: 20px;
       padding: 30px;
     }
-    
+
     @media (max-width: 1024px) {
       .gallery-container {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    
+
     @media (max-width: 768px) {
       .gallery-container {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (max-width: 480px) {
       .gallery-container {
         grid-template-columns: 1fr;
       }
     }
-    
+
     .gallery-item {
       position: relative;
       overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
-    
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
     .gallery-item img {
       width: 100%;
       height: 250px;
       object-fit: cover;
       transition: transform 0.3s ease;
-    }
-    
-    .gallery-item a {
       display: block;
     }
-    
-    .gallery-item a:hover img {
-      transform: scale(1.1);
+
+    .gallery-item a {
+      display: block;
+      position: relative;
     }
-    
+
+    .gallery-item a:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-item .img-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-weight: bold;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .img-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .lightbox {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.9);
       display: none;
       justify-content: center;
       align-items: center;
       z-index: 1000;
     }
-    
+
     .lightbox img {
       max-width: 90%;
       max-height: 80%;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
-    
+
     .nav-btn {
       position: absolute;
       top: 50%;
@@ -92,19 +151,30 @@
       color: white;
       background-color: rgba(0, 0, 0, 0.5);
       border: none;
-      padding: 10px;
+      padding: 15px;
       cursor: pointer;
       z-index: 1;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
     }
-    
+
+    .nav-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
     #prev {
-      left: 10px;
+      left: 20px;
     }
-    
+
     #next {
-      right: 10px;
+      right: 20px;
     }
-    
+
     .close-btn {
       position: absolute;
       top: 20px;
@@ -112,9 +182,21 @@
       font-size: 30px;
       color: white;
       cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
     }
-    </style>
- <header class="header">
+
+    .close-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+  <header class="header">
     <nav class="nav continerNav">
       <a href="../../index.html" class="nav__logo"></a>
 
@@ -140,10 +222,10 @@
 
         <div class="nav__social">
           <a href="#" class="nav__social-link"><i class="ri-instagram-fill"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos." 
-          class="nav__social-link" target="_blank">
-          <i class="ri-whatsapp-fill"></i>
-       </a>
+          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos."
+            class="nav__social-link" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+          </a>
         </div>
       </div>
 
@@ -152,27 +234,41 @@
       </div>
     </nav>
   </header>
-   
+  <div class="tituloPaginas">
+    <h1 class="gallery-title">Nossa Galeria</h1>
+  </div>
 
   <div class="gallery-container">
+    
     <div class="gallery-item">
-      <a href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740" class="popup-link">
-        <img src="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740" alt="Imagem 1">
+      <a href="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+        class="popup-link">
+        <img
+          src="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-5_1562-742.jpg?t=st=1738734966~exp=1738738566~hmac=3b14fa2e155366f358e7177efe2ea9bc0a805e6f04be9c3931168ee58622906a&w=740"
+          alt="Imagem 1">
+        <span class="img-title">Paisagem 1</span>
       </a>
     </div>
     <div class="gallery-item">
       <a href="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" class="popup-link">
         <img src="https://cdn.pixabay.com/photo/2020/01/30/17/49/book-4806076_1280.jpg" alt="Imagem 2">
+        <span class="img-title">Paisagem 2</span>
       </a>
     </div>
     <div class="gallery-item">
-      <a href="https://img.freepik.com/free-photo/vibrant-orange-hues-illuminate-clouds-sunset-sky_157027-2891.jpg" class="popup-link">
-        <img src="https://img.freepik.com/free-photo/vibrant-orange-hues-illuminate-clouds-sunset-sky_157027-2891.jpg" alt="Imagem 3">
+      <a href="https://img.freepik.com/free-photo/vibrant-orange-hues-illuminate-clouds-sunset-sky_157027-2891.jpg"
+        class="popup-link">
+        <img src="https://img.freepik.com/free-photo/vibrant-orange-hues-illuminate-clouds-sunset-sky_157027-2891.jpg"
+          alt="Imagem 3">
+        <span class="img-title">Paisagem 3</span>
       </a>
     </div>
     <div class="gallery-item">
-      <a href="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg" class="popup-link">
-        <img src="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg" alt="Imagem 4">
+      <a href="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
+        class="popup-link">
+        <img src="https://img.freepik.com/premium-photo/clear-sunny-day-with-scenic-cloudscape_705284-69635.jpg"
+          alt="Imagem 4">
+        <span class="img-title">Paisagem 4</span>
       </a>
     </div>
   </div>
@@ -184,52 +280,54 @@
     <button id="next" class="nav-btn">&#10095;</button>
   </div>
 
-  <script src="script.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.popup-link');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.getElementById('close');
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
-  
-    let images = [];
-    let currentIndex = -1;
-  
-    links.forEach((link, index) => {
-      images.push(link.getAttribute('href'));
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        openLightbox(index);
+  <script src="script.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.popup-link');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.getElementById('close');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+
+      let images = [];
+      let currentIndex = -1;
+
+      links.forEach((link, index) => {
+        images.push(link.getAttribute('href'));
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          openLightbox(index);
+        });
+      });
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[currentIndex];
+        lightbox.style.display = 'flex';
+      }
+
+      closeBtn.addEventListener('click', function () {
+        lightbox.style.display = 'none';
+      });
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+        }
+      });
+
+      prevBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        lightboxImg.src = images[currentIndex];
+      });
+
+      nextBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        lightboxImg.src = images[currentIndex];
       });
     });
-  
-    function openLightbox(index) {
-      currentIndex = index;
-      lightboxImg.src = images[currentIndex];
-      lightbox.style.display = 'flex';
-    }
-  
-    closeBtn.addEventListener('click', function () {
-      lightbox.style.display = 'none';
-    });
-  
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
-    });
-  
-    prevBtn.addEventListener('click', function () {
-      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-      lightboxImg.src = images[currentIndex];
-    });
-  
-    nextBtn.addEventListener('click', function () {
-      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-      lightboxImg.src = images[currentIndex];
-    });
-  });
   </script>
 </body>
 <script src="../../Js/NavBar.js"></script>
+
 </html>

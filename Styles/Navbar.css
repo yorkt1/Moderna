@@ -60,15 +60,16 @@
 
   .nav {
     position: relative;
-    height: var(--header-height);
+    height: 4.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .nav__logo {
-    width: 120px;
-    height: 40px;
+    width: 170px;
+    height: 75px;
+
     background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
     background-size: contain;
     background-repeat: no-repeat;
@@ -87,8 +88,10 @@
   @media screen and (max-width: 1150px) {
     .nav__logo {
       
-      width: 120px;
-      height: 40px;
+      width: 170px;
+        height: 65px;
+
+
       background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
       background-size: contain;
       background-repeat: no-repeat;
@@ -214,8 +217,9 @@
   @media screen and (min-width: 1150px) {
     .nav__logo {
      
-      width: 120px;
-      height: 40px;
+      width: 170px;
+      height: 65px;
+
       background-image: url('../Img/Logo-Moderna.png'); /* Certifique-se que está no mesmo diretório */
       background-size: contain;
       background-repeat: no-repeat;
