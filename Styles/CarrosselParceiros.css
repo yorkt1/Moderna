@@ -1,0 +1,90 @@
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Estilos do título */
+.title-container {
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    background: linear-gradient(90deg, #2b2f47, #43465c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos do carrossel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        black 128px,
+        black calc(100% - 128px),
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        black 128px,
+        black calc(100% - 128px),
+        transparent 100%
+    );
+}
+
+.logos-track {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+    cursor: grab;
+    user-select: none;
+    will-change: transform;
+}
+
+.logos-track.animated {
+    animation: infinite-scroll 40s linear infinite;
+}
+
+.logos-track:active {
+    cursor: grabbing;
+}
+
+.logo-item {
+    margin: 0 32px;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.1);
+}
+
+.logo-img {
+    max-width: none;
+    height: 40px;
+    width: auto;
+}
+
+/* Animação */
+@keyframes infinite-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
