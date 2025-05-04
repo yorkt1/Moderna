@@ -1,9 +1,9 @@
 .Contagem {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
     color: #2b2f47;
     background-color: #dee0e9;
 }
@@ -25,11 +25,11 @@
 
 /* Estilo do número */
 .counter-number {
-    font-size: 69px;
-    font-weight: 600;
+    font-size: 50px;
+    font-weight: 500;
     line-height: 1;
     display: inline-block;
-    color: #2b2f47; /* Cor amarela para o número */
+    color: #2b2f47;
 }
 
 /* Prefixo e sufixo ao lado do número */
