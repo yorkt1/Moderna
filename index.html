@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="Styles/Footer.css">
   <link rel="stylesheet" href="Styles/Localização.css">
   <link rel="stylesheet" href="Styles/CarrosselParceiros.css">
+  <link rel="stylesheet" href="Styles/CardsSevicos.css">
   <!-- navbar -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 
@@ -36,7 +37,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Contagem -->
-  <link rel="stylesheet" href="Styles/Contagem.css">  
+  <link rel="stylesheet" href="Styles/Contagem.css"> 
+
+  <!-- fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 
 </head>
@@ -138,7 +144,111 @@
   </div>
 
 
-  <!-- FOTOS -->
+   <!-- Modal de detalhes do serviço -->
+
+  <section id="servicos" class="servicos-section">
+    <div class="servicos-container">
+        <div class="servicos-section-header">
+            <h2 class="servicos-section-subtitle">Nossos serviços</h2>
+            <h1 class="servicos-section-title">Serviços especializados</h1>
+        </div>
+        
+        <!-- Filtros -->
+        <div class="servicos-filters">
+            <button class="servicos-filter-btn active" data-category="Todos">Todos</button>
+            <button class="servicos-filter-btn" data-category="Comercial">Comercial</button>
+            <button class="servicos-filter-btn" data-category="Residencial">Residencial</button>
+            <button class="servicos-filter-btn" data-category="Infraestrutura">Infraestrutura</button>
+            <button class="servicos-filter-btn" data-category="Renovação">Renovação</button>
+        </div>
+        
+        <!-- Grid de serviços -->
+        <div class="servicos-grid" id="servicosGrid">
+            <!-- Serviços serão inseridos aqui via JavaScript -->
+        </div>
+        
+        <!-- Botão "Ver mais" -->
+        <div class="text-center">
+            <a href="#" class="servicos-btn-more">Veja todos os serviços</a>
+        </div>
+    </div>
+    
+ 
+  
+  
+    <div class="servicos-modal" id="servicosModal">
+        <div class="servicos-modal-content">
+            <div class="servicos-modal-image-container">
+                <img id="servicosModalImage" src="" alt="" class="servicos-modal-image">
+                <button class="servicos-modal-close-btn" id="servicosModalCloseBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="servicos-modal-body">
+                <div class="servicos-modal-header">
+                    <h2 id="servicosModalTitle" class="servicos-modal-title"></h2>
+                    <span id="servicosModalCategory" class="servicos-modal-category"></span>
+                </div>
+                <p id="servicosModalDescription" class="servicos-modal-description"></p>
+                
+                <div class="servicos-modal-footer">
+                    <div>
+                        <span class="servicos-footer-label">Concluído em:</span>
+                        <span id="servicosModalYear" class="servicos-footer-value"></span>
+                    </div>
+                    <button class="servicos-request-btn">Solicitar Serviço Similar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+  <!-- sobre nos -->
+
+  <section class="silva-section" id="about">
+    <div class="silva-container">
+        <div class="silva-row">
+            <div class="silva-col silva-about-left">
+                <h6 class="silva-section-title" style="color: #d0b76e; ">Nossa missão</h6>
+                <h6 class="silva-section-subtitle" style="color: #888;">A arquitetura que transforma </h6>
+                <p style="color: #2b2f47; 
+                margin-bottom: 20px;">Oferecer soluções integradas de prestação de serviços, com qualidade e agilidade, garantindo ao cliente a tranquilidade necessária para cuidar de seu negócio, seu patrimônio e sua família.</p>
+                <!-- imagem 600 x 400 -->
+                <img src="Img/Horizontal.png" alt="Imagem sobre a empresa" class="silva-about-img">
+            </div>
+            <div class="silva-col silva-about-right">
+                <div class="silva-row">
+                    <div class="silva-col-6">
+                        <!-- imagem 600 x 600 -->
+                        <img src="Img/quadradoU.png" alt="Imagem 1" class="silva-about-img">
+                    </div>
+                    <div class="silva-col-6">
+                        <!-- imagem 600 x 600 -->
+                        <img src="Img/quadradoD.png" alt="Imagem 2" class="silva-about-img">
+                    </div>
+                    <div class="silva-col-12 silva-mt-4">
+                        <p  style="color: #2b2f47;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                        "><b class="silva-section-title" style="color: #d0b76e">Quem somos</b></p>
+                        <p style="color: #2b2f47; margin-bottom: 20px;">A Moderna MT é uma Empresa de Reformas e Reparos em Prédios Residênciais e Comerciais com atuação no estado de Mato Grosso. Fundada em 2014, atualmente possuímos unidades em Cuiabá e Região.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- PROJETOS -->
   <div class="slide-container swiper">
     <div class="projetos-titulo">
       <h1>Projetos</h1>
@@ -308,46 +418,6 @@
 
 
 
-  <!-- sobre nos -->
-
-  <section class="silva-section" id="about">
-    <div class="silva-container">
-        <div class="silva-row">
-            <div class="silva-col silva-about-left">
-                <h6 class="silva-section-title" style="color: #d0b76e; ">Nossa missão</h6>
-                <h6 class="silva-section-subtitle" style="color: #888;">A arquitetura que transforma </h6>
-                <p style="color: #2b2f47; 
-                margin-bottom: 20px;">Oferecer soluções integradas de prestação de serviços, com qualidade e agilidade, garantindo ao cliente a tranquilidade necessária para cuidar de seu negócio, seu patrimônio e sua família.</p>
-                <!-- imagem 600 x 400 -->
-                <img src="Img/Horizontal.png" alt="Imagem sobre a empresa" class="silva-about-img">
-            </div>
-            <div class="silva-col silva-about-right">
-                <div class="silva-row">
-                    <div class="silva-col-6">
-                        <!-- imagem 600 x 600 -->
-                        <img src="Img/quadradoU.png" alt="Imagem 1" class="silva-about-img">
-                    </div>
-                    <div class="silva-col-6">
-                        <!-- imagem 600 x 600 -->
-                        <img src="Img/quadradoD.png" alt="Imagem 2" class="silva-about-img">
-                    </div>
-                    <div class="silva-col-12 silva-mt-4">
-                        <p  style="color: #2b2f47;
-                        font-weight: bold;
-                        margin-bottom: 20px;
-                        "><b class="silva-section-title" style="color: #d0b76e">Quem somos</b></p>
-                        <p style="color: #2b2f47; margin-bottom: 20px;">A Moderna MT é uma Empresa de Reformas e Reparos em Prédios Residênciais e Comerciais com atuação no estado de Mato Grosso. Fundada em 2014, atualmente possuímos unidades em Cuiabá e Região.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-  
-
-
-
   <div class="whatsapp">
     <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos." target="_blank">
       <img id="whatsapps" src="Img/contatowhats.png" alt="WhatsApp" >
@@ -485,5 +555,6 @@
 <script src="Js/CarrosselParceiros.js"></script>
 <script src="Js/Contagem.js"></script>
 <script src="Js/Galeria.js"></script>
+<script src="Js/CardsServicos.js"></script>
 
 </html>
