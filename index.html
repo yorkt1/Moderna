@@ -62,11 +62,12 @@
             <a href="#" class="nav__link"><i class="ri-home-2-line"></i><span>Início</span></a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link"><i class="ri-user-line"></i><span>Sobre</span></a>
+            <a href="Pages/Servicos.html" class="nav__link"><i class="ri-code-line"></i><span>Projetos</span></a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link"><i class="ri-code-line"></i><span>Projetos</span></a>
+            <a href="#" class="nav__link"><i class="ri-user-line"></i><span>Sobre</span></a>
           </li>
+       
           <li class="nav__item">
             <a href="#" class="nav__link"><i class="ri-mail-line"></i><span>Contato</span></a>
           </li>
@@ -90,6 +91,8 @@
       </div>
     </nav>
   </header>
+
+
   <!-- Home -->
 
   <section id="banner">
@@ -150,7 +153,7 @@
 
   <!-- Modal de detalhes do serviço -->
 
-  <section data-aos="fade" id="servicos" class="servicos-section">
+  <section  id="servicos" class="servicos-section">
     <div class="servicos-container">
       <div class="servicos-section-header">
         <h2 class="servicos-section-subtitle">Nossos serviços</h2>
@@ -158,7 +161,7 @@
       </div>
 
       <!-- Filtros -->
-      <div class="servicos-filters">
+      <div data-aos="fade" class="servicos-filters">
         <button class="servicos-filter-btn active" data-category="Todos">Todos</button>
         <button class="servicos-filter-btn" data-category="Comercial">Comercial</button>
         <button class="servicos-filter-btn" data-category="Residencial">Residencial</button>
@@ -167,20 +170,20 @@
       </div>
 
       <!-- Grid de serviços -->
-      <div class="servicos-grid" id="servicosGrid">
+      <div data-aos="fade" class="servicos-grid" id="servicosGrid">
         <!-- Serviços serão inseridos aqui via JavaScript -->
       </div>
 
       <!-- Botão "Ver mais" -->
-      <div class="text-center">
-        <a href="#" class="servicos-btn-more">Veja todos os serviços</a>
+      <div  data-aos="fade" class="text-center">
+        <a href="Pages/Servicos.html" class="servicos-btn-more">Veja todos os serviços</a>
       </div>
     </div>
 
 
 
 
-    <div class="servicos-modal" id="servicosModal">
+    <div data-aos="fade" class="servicos-modal" id="servicosModal">
       <div class="servicos-modal-content">
         <div class="servicos-modal-image-container">
           <img id="servicosModalImage" src="" alt="" class="servicos-modal-image">
@@ -191,14 +194,14 @@
             </svg>
           </button>
         </div>
-        <div class="servicos-modal-body">
+        <div data-aos="fade" class="servicos-modal-body">
           <div class="servicos-modal-header">
             <h2 id="servicosModalTitle" class="servicos-modal-title"></h2>
             <span id="servicosModalCategory" class="servicos-modal-category"></span>
           </div>
           <p id="servicosModalDescription" class="servicos-modal-description"></p>
 
-          <div class="servicos-modal-footer">
+          <div data-aos="fade"class="servicos-modal-footer">
             <div>
               <span class="servicos-footer-label">Concluído em:</span>
               <span id="servicosModalYear" class="servicos-footer-value"></span>

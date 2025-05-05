@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../Styles/Navbar.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head><style>
+  .servicos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+}
+
+.servicos-section {
+    padding: 5rem 0;
+    background-color: white;
+    margin-top: 60px
+}
+
+.servicos-section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.servicos-section-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #707070;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+
+.servicos-section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2b2f47;
+    margin-bottom: 1rem;
+}
+
+.servicos-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2.5rem 0 2rem;
+}
+
+.servicos-filter-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background-color: var(#2b2f47);
+    color: #2b2f47;
+}
+
+.servicos-filter-btn:hover {
+    background-color: #707070;
+}
+
+.servicos-filter-btn.active {
+    background-color:#707070;
+    color: var(--servicos-white);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .servicos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Cards */
+.servicos-card {
+    background-color:#f5f9fd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.servicos-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.servicos-image-container {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+    
+}
+
+.servicos-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.servicos-card:hover .servicos-image {
+    transform: scale(1.05);
+}
+
+.servicos-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+}
+
+.servicos-card:hover .servicos-overlay {
+    opacity: 1;
+}
+
+.servicos-overlay-content {
+    padding: 1.5rem;
+}
+
+/* hover card */
+.servicos-overlay-category {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.servicos-overlay-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.servicos-content {
+    padding: 1.5rem;
+}
+
+.servicos-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.servicos-card-title {
+    color: #2b2f47;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.servicos-card-year {
+    font-size: 0.875rem;
+    color: #2b2f47;
+}
+
+.servicos-card-description {
+    color:#2b2f47;
+    font-size: 0.875rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* botão card */
+
+
+.servicos-card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2b2f47;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.servicos-card-link {
+    /* Remove todos os estilos padrão de botão */
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    
+    /* Estilo apenas do texto */
+    display: inline-block;
+    color: #2b2f47;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-decoration: none; /* Remove sublinhado se houver */
+    transition: color 0.3s ease;
+}
+
+.servicos-card-link:hover {
+    color: #d0b76e;
+    /* Você pode adicionar outros efeitos de hover se quiser */
+    /* Opcional: adiciona sublinhado no hover */
+}
+
+.servicos-btn-more {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.75rem 2rem;
+    border: 1px solid #2b2f47;
+    border-radius: 0.375rem;
+    color:#2b2f47;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.servicos-btn-more:hover {
+    background-color: #fffffe;
+    color: #d0b76e;
+}
+
+/* Modal Styles */
+.servicos-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: servicos-fadeIn 0.3s ease;
+}
+
+@keyframes servicos-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.servicos-modal.active {
+    display: flex;
+}
+
+.servicos-modal-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    max-width: 56rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.servicos-modal-image-container {
+    position: relative;
+    height: 20rem;
+}
+
+.servicos-modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicos-modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 21px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.servicos-modal-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.servicos-modal-close-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.servicos-modal-body {
+    padding: 1.5rem;
+}
+
+.servicos-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.servicos-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2b2f47;
+}
+
+.servicos-modal-category {
+    background-color: #dbeafe;
+    color: #8a99cc;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* texto-descrição */
+.servicos-modal-description {
+    color: #2b2f47;
+    margin-bottom: 1.5rem;
+}
+
+.servicos-modal-footer {
+    border-top: 1px solid #2b2f47;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicos-footer-label {
+    color: #2b2f47;
+    font-size: 0.875rem;
+}
+
+.servicos-footer-value {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    color: #2b2f47;
+}
+
+.servicos-request-btn {
+    color: #2b2f47;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.servicos-request-btn:hover {
+    color: #d0b76e;
+}
+</style>
+<body>
+
+  <header class="header">
+    <nav class="nav continerNav" href="#">
+      <a href="#" class="nav__logo"></a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link"><i class="ri-home-2-line"></i><span>Início</span></a>
+          </li>
+          <li class="nav__item">
+            <a href="Servicos.html" class="nav__link"><i class="ri-code-line"></i><span>Projetos</span></a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"><i class="ri-user-line"></i><span>Sobre</span></a>
+          </li>
+       
+          <li class="nav__item">
+            <a href="#" class="nav__link"><i class="ri-mail-line"></i><span>Contato</span></a>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <div class="nav__social">
+          <a href="#" class="nav__social-link"><i class="ri-instagram-fill"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos."
+            class="nav__social-link" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  
+  <section  id="servicos" class="servicos-section">
+    <div class="servicos-container">
+      <div class="servicos-section-header">
+        <h2  data-aos="fade-up" class="servicos-section-subtitle">Nossos serviços</h2>
+        <h1  data-aos="fade-up" class="servicos-section-title">Serviços especializados</h1>
+      </div>
+
+      <!-- Filtros -->
+      <div  class="servicos-filters">
+        <button data-aos="fade-up" class="servicos-filter-btn active" data-category="Todos">Todos</button>
+        <button data-aos="fade-up" class="servicos-filter-btn" data-category="Comercial">Comercial</button>
+        <button data-aos="fade-up" class="servicos-filter-btn" data-category="Residencial">Residencial</button>
+        <button data-aos="fade-up" class="servicos-filter-btn" data-category="Infraestrutura">Infraestrutura</button>
+        <button data-aos="fade-up" class="servicos-filter-btn" data-category="Renovação">Renovação</button>
+      </div>
+
+      <!-- Grid de serviços -->
+      <div data-aos="fade-up" class="servicos-grid" id="servicosGrid">
+        <!-- Serviços serão inseridos aqui via JavaScript -->
+      </div>
+
+      <!-- Botão "Ver mais" -->
+    
+
+
+
+    <div data-aos="fade" class="servicos-modal" id="servicosModal">
+      <div class="servicos-modal-content">
+        <div class="servicos-modal-image-container">
+          <img id="servicosModalImage" src="" alt="" class="servicos-modal-image">
+          <button class="servicos-modal-close-btn" id="servicosModalCloseBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div data-aos="fade" class="servicos-modal-body">
+          <div class="servicos-modal-header">
+            <h2 id="servicosModalTitle" class="servicos-modal-title"></h2>
+            <span id="servicosModalCategory" class="servicos-modal-category"></span>
+          </div>
+          <p id="servicosModalDescription" class="servicos-modal-description"></p>
+
+          <div data-aos="fade"class="servicos-modal-footer">
+            <div>
+              <span class="servicos-footer-label">Concluído em:</span>
+              <span id="servicosModalYear" class="servicos-footer-value"></span>
+            </div>
+            <button class="servicos-request-btn">Solicitar Serviço Similar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+</body><script>const servicos = [
+  {
+      id: 1,
+      title: 'Banco acoplado com floreira',
+      category: 'Comercial',
+      description: 'Bancos com design rusticos feito com marmores.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746400146/17_jstqqz.jpg',
+      year: '2022'
+  },
+  {
+      id: 2,
+      title: 'Caixotes de floreiras',
+      category: 'Residencial',
+      description: 'Caixotes de floreiras em deck itaúba.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746399367/Caixotes_de_floreiras_em_deck_ita%C3%BAba_1_kfqe1c.jpg',
+      year: '2023'
+  },
+
+  {
+      id: 3,
+      title: 'Expositores',
+      category: 'Infraestrutura',
+      description: 'Expositores de folhas de portas com medidas diversas.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746400464/Expositores_de_folhas_de_portas_com_medidas_diversas_jsy0bp.jpg',
+      year: '2021'
+  },
+  {
+      id: 4,
+      title: 'Reforma de embarcação',
+      category: 'Renovação',
+      description: 'Restauração cuidadosa de um deck com adições modernas.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746400543/119_motvwu.jpg',
+      year: '2022'
+  },
+  {
+      id: 5,
+      title: 'Carrinho sob medida',
+      category: 'Infraestrutura',
+      description: 'Carrinho feito sob encomenda para transporte de bancadas de pedra.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746400683/9_oellvf.jpg',
+      year: '2020'
+  },
+  {
+      id: 6,
+      title: 'Placa cimenticia',
+      category: 'Comercial',
+      description: 'Fechamento de tubulações com placa cimenticia.',
+      image: 'https://res.cloudinary.com/dqewxdbfx/image/upload/v1746400874/27_h9igph.jpg',
+      year: '2023'
+  }
+];
+
+const servicosCategories = ['Todos', 'Commercial', 'Residencial', 'Infraestrutura', 'Renovação'];
+
+// Variáveis globais
+let servicosActiveCategory = 'Todos';
+const servicosGrid = document.getElementById('servicosGrid');
+const servicosFilterButtons = document.querySelectorAll('.servicos-filter-btn');
+const servicosModal = document.getElementById('servicosModal');
+const servicosModalCloseBtn = document.getElementById('servicosModalCloseBtn');
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+  renderServicos(servicos);
+  setupServicosEventListeners();
+});
+
+// Função para renderizar os serviços
+function renderServicos(servicosToRender) {
+  servicosGrid.innerHTML = '';
+  
+  servicosToRender.forEach(servico => {
+      const servicoCard = document.createElement('div');
+      servicoCard.className = 'servicos-card';
+      servicoCard.dataset.id = servico.id;
+      
+      servicoCard.innerHTML = `
+          <div class="servicos-image-container">
+              <img src="${servico.image}" alt="${servico.title}" class="servicos-image">
+              <div class="servicos-overlay">
+                  <div class="servicos-overlay-content">
+                      <span class="servicos-overlay-category">${servico.category}</span>
+                      <h3 class="servicos-overlay-title">${servico.title}</h3>
+                  </div>
+              </div>
+          </div>
+          <div class="servicos-content">
+              <div class="servicos-card-header">
+                  <h3 class="servicos-card-title">${servico.title}</h3>
+                  <span class="servicos-card-year">${servico.year}</span>
+              </div>
+              <p class="servicos-card-description">${servico.description}</p>
+              <button style="margin-top:20px;" class="servicos-card-link">Ver detalhes</button>
+          </div>
+      `;
+      
+      servicosGrid.appendChild(servicoCard);
+  });
+  
+  // Adiciona event listeners para os cards de serviço
+  document.querySelectorAll('.servicos-card').forEach(card => {
+      card.addEventListener('click', () => openServicoModal(card.dataset.id));
+  });
+}
+
+// Função para abrir o modal do serviço
+function openServicoModal(servicoId) {
+  const servico = servicos.find(s => s.id === parseInt(servicoId));
+  if (!servico) return;
+  
+  document.getElementById('servicosModalImage').src = servico.image;
+  document.getElementById('servicosModalImage').alt = servico.title;
+  document.getElementById('servicosModalTitle').textContent = servico.title;
+  document.getElementById('servicosModalCategory').textContent = servico.category;
+  document.getElementById('servicosModalDescription').textContent = servico.description;
+  document.getElementById('servicosModalYear').textContent = servico.year;
+  
+  servicosModal.classList.add('active');
+}
+
+// Função para fechar o modal
+function closeServicoModal() {
+  servicosModal.classList.remove('active');
+}
+
+// Função para filtrar serviços
+function filterServicos(category) {
+  servicosActiveCategory = category;
+  
+  // Atualiza os botões de filtro
+  servicosFilterButtons.forEach(btn => {
+      if (btn.dataset.category === category) {
+          btn.classList.add('active');
+      } else {
+          btn.classList.remove('active');
+      }
+  });
+  
+  // Filtra os serviços
+  const filteredServicos = category === 'Todos' 
+      ? servicos 
+      : servicos.filter(servico => servico.category === category);
+  
+  renderServicos(filteredServicos);
+}
+
+// Configura os event listeners
+function setupServicosEventListeners() {
+  // Filtros
+  servicosFilterButtons.forEach(btn => {
+      btn.addEventListener('click', () => filterServicos(btn.dataset.category));
+  });
+  
+  // Modal
+  servicosModalCloseBtn.addEventListener('click', closeServicoModal);
+  
+  // Fechar modal ao clicar fora do conteúdo
+  servicosModal.addEventListener('click', (e) => {
+      if (e.target === servicosModal) {
+          closeServicoModal();
+      }
+  });
+}</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Inicialize no JavaScript
+  AOS.init({
+    duration: 800, // Duração da animação
+    once: false // Anima apenas uma vez
+  });
+</script>
+
+</html>
