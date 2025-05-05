@@ -44,7 +44,7 @@ body {
 }
 
 .highlight-box {
-  border-left: 3px solid #fff;
+  border-left: 3px solid #d0b76e;
   padding-left: 20px;
   margin-top: 20px;
 }
@@ -84,7 +84,7 @@ body {
 
 .btn-modernamt.special {
   border-color: #00ff88;
-  color: #00ff88;
+  color: #fff;
 }
 
 .btn-modernamt::before {
@@ -212,7 +212,7 @@ body {
 
   .highlight-box {
     border-left: none;
-    border-top: 2px solid #fff;
+    border-top: 2px solid #d0b76e;
     padding-left: 0;
     padding-top: 20px;
   }
