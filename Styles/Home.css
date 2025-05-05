@@ -59,7 +59,7 @@ body {
 .btn-container-moderna {
   display: flex;
   gap: 16px;
-  padding: 20px;
+  
   flex-wrap: wrap;
 }
 
@@ -163,6 +163,12 @@ body {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .btn-container-moderna {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .container {
     display: block;
   }
