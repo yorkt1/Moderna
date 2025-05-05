@@ -1,7 +1,7 @@
 function animateCounter(element) {
     const targetValue = parseInt(element.getAttribute('data-to-value'));
     let currentValue = 0;
-    const duration = 1000; // duração da animação em milissegundos (1 segundo)
+    const duration = 3000; // duração da animação em milissegundos (1 segundo)
     const frameRate = 60; // 60 frames por segundo
     const totalFrames = Math.round(duration / (1000 / frameRate));
     const increment = targetValue / totalFrames;

@@ -37,13 +37,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Contagem -->
-  <link rel="stylesheet" href="Styles/Contagem.css"> 
+  <link rel="stylesheet" href="Styles/Contagem.css">
 
   <!-- fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 
+
+  <!-- animação -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -74,10 +78,10 @@
 
         <div class="nav__social">
           <a href="#" class="nav__social-link"><i class="ri-instagram-fill"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos." 
-          class="nav__social-link" target="_blank">
-          <i class="ri-whatsapp-fill"></i>
-       </a>
+          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos."
+            class="nav__social-link" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+          </a>
         </div>
       </div>
 
@@ -86,15 +90,15 @@
       </div>
     </nav>
   </header>
-<!-- Home -->
- 
+  <!-- Home -->
+
   <section id="banner">
     <div class="container">
       <div class="text-area">
-        <h1>A solução da sua obra</h1>
-        <div class="highlight-box">
-          <p style="color: #fff;">A Moderna está sempre pronta para suas transformações.</p>
-          <a href="" class="button">
+        <h1 data-aos="fade-right">A solução da sua obra</h1>
+        <div data-aos="fade-right" class="highlight-box">
+          <p data-aos="fade-right" style="color: #fff;">A Moderna está sempre pronta para suas transformações.</p>
+          <a data-aos="fade-right" href="" class="button">
             Conheça nossas soluções <span>+</span>
           </a>
         </div>
@@ -109,7 +113,7 @@
   <div class="Contagem">
 
 
-    <div class="counter">
+    <div data-aos="fade-up" class="counter">
       <div class="counter-number-wrapper">
         <span class="counter-number-prefix"></span>
         <span class="counter-number" data-to-value="2014">0</span>
@@ -117,7 +121,7 @@
       </div>
       <div class="counter-title">Ano de fundação</div>
     </div>
-    <div class="counter">
+    <div  data-aos="fade-up"class="counter">
       <div class="counter-number-wrapper">
         <span class="counter-number-prefix">+</span>
         <span class="counter-number" data-to-value="200">0</span>
@@ -125,7 +129,7 @@
       </div>
       <div class="counter-title">M² construídos</div>
     </div>
-    <div class="counter">
+    <div data-aos="fade-up" class="counter">
       <div class="counter-number-wrapper">
         <span class="counter-number-prefix">+</span>
         <span class="counter-number" data-to-value="1250">0</span>
@@ -133,7 +137,7 @@
       </div>
       <div class="counter-title">Seviços</div>
     </div>
-    <div class="counter">
+    <div data-aos="fade-up" class="counter">
       <div class="counter-number-wrapper">
         <span class="counter-number-prefix">+</span>
         <span class="counter-number" data-to-value="2000">0</span>
@@ -144,67 +148,68 @@
   </div>
 
 
-   <!-- Modal de detalhes do serviço -->
+  <!-- Modal de detalhes do serviço -->
 
   <section id="servicos" class="servicos-section">
     <div class="servicos-container">
-        <div class="servicos-section-header">
-            <h2 class="servicos-section-subtitle">Nossos serviços</h2>
-            <h1 class="servicos-section-title">Serviços especializados</h1>
-        </div>
-        
-        <!-- Filtros -->
-        <div class="servicos-filters">
-            <button class="servicos-filter-btn active" data-category="Todos">Todos</button>
-            <button class="servicos-filter-btn" data-category="Comercial">Comercial</button>
-            <button class="servicos-filter-btn" data-category="Residencial">Residencial</button>
-            <button class="servicos-filter-btn" data-category="Infraestrutura">Infraestrutura</button>
-            <button class="servicos-filter-btn" data-category="Renovação">Renovação</button>
-        </div>
-        
-        <!-- Grid de serviços -->
-        <div class="servicos-grid" id="servicosGrid">
-            <!-- Serviços serão inseridos aqui via JavaScript -->
-        </div>
-        
-        <!-- Botão "Ver mais" -->
-        <div class="text-center">
-            <a href="#" class="servicos-btn-more">Veja todos os serviços</a>
-        </div>
+      <div class="servicos-section-header">
+        <h2 class="servicos-section-subtitle">Nossos serviços</h2>
+        <h1 class="servicos-section-title">Serviços especializados</h1>
+      </div>
+
+      <!-- Filtros -->
+      <div class="servicos-filters">
+        <button class="servicos-filter-btn active" data-category="Todos">Todos</button>
+        <button class="servicos-filter-btn" data-category="Comercial">Comercial</button>
+        <button class="servicos-filter-btn" data-category="Residencial">Residencial</button>
+        <button class="servicos-filter-btn" data-category="Infraestrutura">Infraestrutura</button>
+        <button class="servicos-filter-btn" data-category="Renovação">Renovação</button>
+      </div>
+
+      <!-- Grid de serviços -->
+      <div class="servicos-grid" id="servicosGrid">
+        <!-- Serviços serão inseridos aqui via JavaScript -->
+      </div>
+
+      <!-- Botão "Ver mais" -->
+      <div class="text-center">
+        <a href="#" class="servicos-btn-more">Veja todos os serviços</a>
+      </div>
     </div>
-    
- 
-  
-  
+
+
+
+
     <div class="servicos-modal" id="servicosModal">
-        <div class="servicos-modal-content">
-            <div class="servicos-modal-image-container">
-                <img id="servicosModalImage" src="" alt="" class="servicos-modal-image">
-                <button class="servicos-modal-close-btn" id="servicosModalCloseBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="servicos-modal-body">
-                <div class="servicos-modal-header">
-                    <h2 id="servicosModalTitle" class="servicos-modal-title"></h2>
-                    <span id="servicosModalCategory" class="servicos-modal-category"></span>
-                </div>
-                <p id="servicosModalDescription" class="servicos-modal-description"></p>
-                
-                <div class="servicos-modal-footer">
-                    <div>
-                        <span class="servicos-footer-label">Concluído em:</span>
-                        <span id="servicosModalYear" class="servicos-footer-value"></span>
-                    </div>
-                    <button class="servicos-request-btn">Solicitar Serviço Similar</button>
-                </div>
-            </div>
+      <div class="servicos-modal-content">
+        <div class="servicos-modal-image-container">
+          <img id="servicosModalImage" src="" alt="" class="servicos-modal-image">
+          <button class="servicos-modal-close-btn" id="servicosModalCloseBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+        <div class="servicos-modal-body">
+          <div class="servicos-modal-header">
+            <h2 id="servicosModalTitle" class="servicos-modal-title"></h2>
+            <span id="servicosModalCategory" class="servicos-modal-category"></span>
+          </div>
+          <p id="servicosModalDescription" class="servicos-modal-description"></p>
+
+          <div class="servicos-modal-footer">
+            <div>
+              <span class="servicos-footer-label">Concluído em:</span>
+              <span id="servicosModalYear" class="servicos-footer-value"></span>
+            </div>
+            <button class="servicos-request-btn">Solicitar Serviço Similar</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  
+
 
 
 
@@ -214,37 +219,41 @@
 
   <section class="silva-section" id="about">
     <div class="silva-container">
-        <div class="silva-row">
-            <div class="silva-col silva-about-left">
-                <h6 class="silva-section-title" style="color: #d0b76e; ">Nossa missão</h6>
-                <h6 class="silva-section-subtitle" style="color: #888;">A arquitetura que transforma </h6>
-                <p style="color: #2b2f47; 
-                margin-bottom: 20px;">Oferecer soluções integradas de prestação de serviços, com qualidade e agilidade, garantindo ao cliente a tranquilidade necessária para cuidar de seu negócio, seu patrimônio e sua família.</p>
-                <!-- imagem 600 x 400 -->
-                <img src="Img/Horizontal.png" alt="Imagem sobre a empresa" class="silva-about-img">
+      <div class="silva-row">
+        <div class="silva-col silva-about-left">
+          <h6 class="silva-section-title" style="color: #d0b76e; ">Nossa missão</h6>
+          <h6 class="silva-section-subtitle" style="color: #888;">A arquitetura que transforma </h6>
+          <p style="color: #2b2f47; 
+                margin-bottom: 20px;">Oferecer soluções integradas de prestação de serviços, com qualidade e agilidade,
+            garantindo ao cliente a tranquilidade necessária para cuidar de seu negócio, seu patrimônio e sua família.
+          </p>
+          <!-- imagem 600 x 400 -->
+          <img src="Img/Horizontal.png" alt="Imagem sobre a empresa" class="silva-about-img">
+        </div>
+        <div class="silva-col silva-about-right">
+          <div class="silva-row">
+            <div class="silva-col-6">
+              <!-- imagem 600 x 600 -->
+              <img src="Img/quadradoU.png" alt="Imagem 1" class="silva-about-img">
             </div>
-            <div class="silva-col silva-about-right">
-                <div class="silva-row">
-                    <div class="silva-col-6">
-                        <!-- imagem 600 x 600 -->
-                        <img src="Img/quadradoU.png" alt="Imagem 1" class="silva-about-img">
-                    </div>
-                    <div class="silva-col-6">
-                        <!-- imagem 600 x 600 -->
-                        <img src="Img/quadradoD.png" alt="Imagem 2" class="silva-about-img">
-                    </div>
-                    <div class="silva-col-12 silva-mt-4">
-                        <p  style="color: #2b2f47;
+            <div class="silva-col-6">
+              <!-- imagem 600 x 600 -->
+              <img src="Img/quadradoD.png" alt="Imagem 2" class="silva-about-img">
+            </div>
+            <div class="silva-col-12 silva-mt-4">
+              <p style="color: #2b2f47;
                         font-weight: bold;
                         margin-bottom: 20px;
                         "><b class="silva-section-title" style="color: #d0b76e">Quem somos</b></p>
-                        <p style="color: #2b2f47; margin-bottom: 20px;">A Moderna MT é uma Empresa de Reformas e Reparos em Prédios Residênciais e Comerciais com atuação no estado de Mato Grosso. Fundada em 2014, atualmente possuímos unidades em Cuiabá e Região.</p>
-                    </div>
-                </div>
+              <p style="color: #2b2f47; margin-bottom: 20px;">A Moderna MT é uma Empresa de Reformas e Reparos em
+                Prédios Residênciais e Comerciais com atuação no estado de Mato Grosso. Fundada em 2014, atualmente
+                possuímos unidades em Cuiabá e Região.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
@@ -419,8 +428,9 @@
 
 
   <div class="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos." target="_blank">
-      <img id="whatsapps" src="Img/contatowhats.png" alt="WhatsApp" >
+    <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos."
+      target="_blank">
+      <img id="whatsapps" src="Img/contatowhats.png" alt="WhatsApp">
     </a>
   </div>
 
@@ -429,122 +439,125 @@
   <div class="main-container">
     <!-- Título "Parceiros" -->
     <div class="title-container">
-        <h1 class="main-title">Nossos parceiros</h1>
-        <p class="subtitle">Conheça as marcas que confiam e trabalham conosco</p>
+      <h1 class="main-title">Nossos parceiros</h1>
+      <p class="subtitle">Conheça as marcas que confiam e trabalham conosco</p>
     </div>
-    
+
     <!-- Carrossel de Logos -->
     <div class="carousel-container" id="carousel">
-        <div class="logos-track animated" id="logos-track">
-            <!-- Logos serão inseridos via JavaScript -->
-        </div>
+      <div class="logos-track animated" id="logos-track">
+        <!-- Logos serão inseridos via JavaScript -->
+      </div>
     </div>
-</div>
+  </div>
 
 
 
   <!-- Localização -->
   <div class="container-cuiaba">
     <div class="localizacao-section">
-        <div class="mapa-cuiaba">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15734.285323369042!2d-56.0939444!3d-15.5843594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db1a43977e433%3A0xdae38ef826307c7f!2sModerna%20Engenharia%20e%20Arquitetura!5e0!3m2!1spt-BR!2sbr!4v1714342999093!5m2!1spt-BR!2sbr" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-
-        <div class="formulario-cuiaba">
-            <h2 class="titulo-formulario">Entre em <span>Contato</span></h2>
-            <form class="formulario-local">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <input type="tel" placeholder="Seu Telefone">
-                <input type="text" placeholder="Assunto">
-                <button type="submit" class="botao-enviar">Enviar Mensagem</button>
-            </form>
-        </div>
-
-        <div class="info-contato-cuiaba">
-            <h3>Informações de Contato</h3>
-            <div class="item-info">
-                <i class="fas fa-map-marker-alt"></i>
-                <span style="color: #2b2f47;">Moderna MT - Predial e Residencial Ltda - Jardim das Palmeiras - Cuiabá - Mato Grosso</span>
-            </div>
-            <div class="item-info">
-                <i class="fas fa-phone"></i>
-                <span style="color: #2b2f47;">Telefone: Cuiabá (65) 98160-0000 <br>
-                  São Paulo (11) 95232-7001</span>
-            </div>
-            <div class="item-info">
-                <i class="fas fa-envelope"></i>
-                <span style="color: #2b2f47;">contato@modernamt.com.br</span>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer -->
-
-<div class="footer-wrapper">
-  
-  <section class="footer-info-section">
-    <div class="footer-info-content">
-
-      <div class="footer-info-box">
-        <div class="footer-info-detail">
-          <h4>Suporte Moderna</h4>
-          <p>Toda a equipe da Moderna está pronta para atendê-lo rapidamente por e-mail ou WhatsApp, seja para orçamentos ou agendar uma visita à sua obra.</p>
-        </div>
+      <div class="mapa-cuiaba">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15734.285323369042!2d-56.0939444!3d-15.5843594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db1a43977e433%3A0xdae38ef826307c7f!2sModerna%20Engenharia%20e%20Arquitetura!5e0!3m2!1spt-BR!2sbr!4v1714342999093!5m2!1spt-BR!2sbr"
+          allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
 
-      <div class="footer-info-box">
-        <div class="footer-link-box">
-          <h4>Links</h4>
-          <div class="footer-links">
-            <a href="index.html">Inicio</a>
-            <a href="about.html">Sobre</a>
-            <a href="service.html">Projetos</a>
-            <a href="contact.html">Contato</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-info-box">
-        <h4>Entre em contato por e-mail</h4>
-        <form class="footer-form" action="#">
-          <input type="text" placeholder="Digite seu e-mail" />
-          <button type="submit">Enviar</button>
+      <div class="formulario-cuiaba">
+        <h2 class="titulo-formulario">Entre em <span>Contato</span></h2>
+        <form class="formulario-local">
+          <input type="text" placeholder="Seu Nome" required>
+          <input type="email" placeholder="Seu E-mail" required>
+          <input type="tel" placeholder="Seu Telefone">
+          <input type="text" placeholder="Assunto">
+          <button type="submit" class="botao-enviar">Enviar Mensagem</button>
         </form>
       </div>
 
-      <div class="footer-info-box">
-        <div class="footer-info-contact">
-          <h4>Endereço</h4>
-          <div class="footer-contact-links">
-            <a href="#"><span>📍 Localização</span></a>
-            <a href="#"><span>📞 Cell +55 65 98160-0000</span></a>
-            <a href="#"><span>✉️ contato@modernamt.com.br</span></a>
-          </div>
+      <div class="info-contato-cuiaba">
+        <h3>Informações de Contato</h3>
+        <div class="item-info">
+          <i class="fas fa-map-marker-alt"></i>
+          <span style="color: #2b2f47;">Moderna MT - Predial e Residencial Ltda - Jardim das Palmeiras - Cuiabá - Mato
+            Grosso</span>
         </div>
-        <div class="footer-social">
-          <a href="#" class="nav__social-link"><i class="ri-instagram-fill"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos." 
-          class="nav__social-link" target="_blank">
-          <i class="ri-whatsapp-fill"></i>
-       </a>
+        <div class="item-info">
+          <i class="fas fa-phone"></i>
+          <span style="color: #2b2f47;">Telefone: Cuiabá (65) 98160-0000 <br>
+            São Paulo (11) 95232-7001</span>
+        </div>
+        <div class="item-info">
+          <i class="fas fa-envelope"></i>
+          <span style="color: #2b2f47;">contato@modernamt.com.br</span>
         </div>
       </div>
-
     </div>
-  </section>
-  <!-- End Info Section -->
+  </div>
+  <!-- Footer -->
 
-  <!-- Footer Bottom -->
-  <footer class="footer-bottom">
-    <p>&copy; <span id="footerYear"></span> All Rights Reserved By <a href="https://html.design/">Free Html Templates</a></p>
-  </footer>
-  <!-- End Footer Bottom -->
+  <div class="footer-wrapper">
 
-</div>
+    <section class="footer-info-section">
+      <div class="footer-info-content">
+
+        <div class="footer-info-box">
+          <div class="footer-info-detail">
+            <h4>Suporte Moderna</h4>
+            <p>Toda a equipe da Moderna está pronta para atendê-lo rapidamente por e-mail ou WhatsApp, seja para
+              orçamentos ou agendar uma visita à sua obra.</p>
+          </div>
+        </div>
+
+        <div class="footer-info-box">
+          <div class="footer-link-box">
+            <h4>Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Inicio</a>
+              <a href="about.html">Sobre</a>
+              <a href="service.html">Projetos</a>
+              <a href="contact.html">Contato</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-info-box">
+          <h4>Entre em contato por e-mail</h4>
+          <form class="footer-form" action="#">
+            <input type="text" placeholder="Digite seu e-mail" />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <div class="footer-info-box">
+          <div class="footer-info-contact">
+            <h4>Endereço</h4>
+            <div class="footer-contact-links">
+              <a href="#"><span>📍 Localização</span></a>
+              <a href="#"><span>📞 Cell +55 65 98160-0000</span></a>
+              <a href="#"><span>✉️ contato@modernamt.com.br</span></a>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="nav__social-link"><i class="ri-instagram-fill"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5565981600000&text=Ol%C3%A1...%20Entrei%20pelo%20site%20e%20quero%20mais%20informa%c3%a7%c3%b5es%20sobre%20orçamentos."
+              class="nav__social-link" target="_blank">
+              <i class="ri-whatsapp-fill"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Info Section -->
+
+    <!-- Footer Bottom -->
+    <footer class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> All Rights Reserved By <a href="https://html.design/">Free Html
+          Templates</a></p>
+    </footer>
+    <!-- End Footer Bottom -->
+
+  </div>
 
 
 </body>
@@ -556,5 +569,16 @@
 <script src="Js/Contagem.js"></script>
 <script src="Js/Galeria.js"></script>
 <script src="Js/CardsServicos.js"></script>
+
+<!-- animação -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  // Inicialize no JavaScript
+  AOS.init({
+    duration: 800, // Duração da animação
+    once: false // Anima apenas uma vez
+  });
+</script>
 
 </html>
